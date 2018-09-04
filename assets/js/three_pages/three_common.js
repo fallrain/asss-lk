@@ -1,5 +1,5 @@
 // 每页显示记录数标志
-var pageNum = 10;
+var pageNum = 100;
 //查询状态为
 var searchFlag = false;
 // 分页信息对象
