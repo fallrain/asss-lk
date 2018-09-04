@@ -1,0 +1,322 @@
+body {
+	background-color: #eee;
+}
+
+.custom-header {
+	background-color: rgb(44, 51, 57);
+	margin-bottom: 0rem;
+	border-color: white;
+	line-height: 50px;
+	font-size: 16px;
+	padding-left: 20px;
+}
+
+.custom-header span {
+	font-weight: bold;
+}
+
+.custom-search {
+	margin-left: 0;
+	padding-bottom: 8px;
+	background-color: white;
+	max-width: 100%;
+	-moz-box-shadow: 5px 5px 5px rgb(244, 244, 244);
+	box-shadow: 5px 5px 5px rgb(244, 244, 244);
+}
+
+#area {
+	color: white;
+}
+
+.flow .color-text {
+	font-size: 14px;
+	/* 2018.7.27 */
+	text-align: right;
+	padding-right: 25%;
+	color: white;
+	/* border: 1px solid  #ad8484; */
+}
+
+#area .color-text a{
+	color: white;
+	text-decoration:underline;
+}
+
+#area .flow-total .color-text{
+	text-align: center;
+}
+
+#area .description-text {
+	font-size: 15px;
+	text-align: center;
+	padding-right: 10px;
+	/* display:none; */
+}
+
+#area .color-div {
+	height: 134px;
+	/* border: 1px solid #7d7d7d; */
+	border-top: 0px;
+	/* updateTime : 2018.7.27 */
+	/* padding-top: 35px; */
+}
+
+#point-level {
+	height: 50px;
+	background-color: rgb(44, 51, 57);
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+}
+
+#green-area {
+	background-color: rgb(70, 202, 155);
+}
+
+#blue-area {
+	background-color: rgb(58, 190, 229);
+}
+
+#yellow-area {
+	background-color: rgb(246, 200, 65);
+}
+
+#red-area {
+	background-color: rgb(248, 83, 89);
+	margin-bottom: 10px;
+}
+
+#star-level-area div {
+	margin-bottom: 10px;
+}
+
+#star-table {
+	height: 215px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#star-table .am-table {
+	margin-bottom: 0px;
+	background-color: white;
+}
+
+#star-table td, #star-table th {
+	text-align: center;
+	border-top: 0px;
+	border-bottom: 0px;
+	height: 43px;
+	line-height: 43px;
+	padding: 0px;
+}
+
+.bg-blue {
+	background-color: rgb(61, 149, 223);
+	color: white;
+}
+
+.bg-blue:hover {
+	background-color: rgb(0, 139, 255);
+}
+
+#pie-div {
+	background-color: white;
+	height: 216px;
+}
+
+#pie-title {
+	color: rgb(61, 149, 223);
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+#five-div {
+	background-color: white;
+	height: 360px;
+	padding: 15px;
+	width: 100%;
+	overflow-x: auto;
+	padding-top: 30px;
+	overflow-y: hidden;
+}
+
+#five-table {
+	min-width: 1000px;
+	overflow-x: auto;
+}
+
+#five-div td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 220px;
+	height: 44px;
+}
+
+.right-up {
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid #000000;
+	margin-left: -4px;
+	float: left;
+	margin-top: 40px;
+}
+
+.left-up {
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid #000000;
+	float: right;
+	margin-right: -4px;
+	margin-top: 40px;
+}
+
+.up-right {
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid #000000;
+	float: left;
+	position: relative;
+	top: -22px;
+}
+
+.bottom-left {
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid #000000;
+	float: left;
+	position: relative;
+	top: 22px;
+	margin-left: -4px;
+}
+
+.am-icon-star {
+	color: red;
+	font-size: 20px;
+}
+
+.are_num {
+	color: white;
+	text-decoration: underline;
+}
+
+.star_num {
+	color: black;
+	text-decoration: underline;
+}
+
+.am-form input[type=text][readonly] {
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.am-topbar-btn .am-form-label {
+	line-height: 37px;
+	padding-right: 0;
+}
+
+.am-topbar-btn .am-u-md-8 {
+	padding-left: 0px;
+}
+/* 右侧分区流向 */
+.flow {
+	height:100%;
+	width: 50%;
+	float: left;
+	color: #000;
+	/* border-right: 1px solid #fff; */
+	vertical-align: middle;
+}
+
+.flow .color-text {
+	height: 33.5px;
+	line-height: 33.5px;
+	/* border-bottom: 1px solid #ad8484; */
+}
+
+.flow-total {
+	width: 50%;
+	float: left;
+	padding-top: 35px;
+	/* border: 1px solid  #ad8484; */
+	height: 100%;
+}
+@media only screen and (min-width:641px) {
+	#star-table .am-table{
+		padding-left: 18px;	
+	}
+}
+#jlTr td{
+	width: 16.666%;
+}
+
+/* 二级页面右下方图表样式	begin */
+#star-level-area .y-axis{
+	height: 49.6px;
+	display: block;
+	text-align: center;
+}
+.y-axis span{
+	width: 100px;
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	padding: 3px;
+	vertical-align: middle;
+}
+.y-axis:before{
+	content:'';
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+#five-table .y-axis span , #star-level-area .oneStar span{
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+#five-table .x-axis{
+	width: 100%;
+	height: 35px;
+	display: inline-block;
+	float: left;
+	border-left: 1px solid black;
+	padding-top: 10px;
+	margin-bottom: 0
+}
+
+#five-table .x-axis-value{
+	width: 120px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+}
+#five-table .x-axis-name{
+	width: 80px;
+	display: inline-block;
+	text-align: center;
+	float: right;
+	position: relative;
+	left: 30px;
+	font-size: 14px;
+}
+.am-icon-star {
+    font-size: 18px;
+}
+
+#five-table .y-axis span[class='y_val']{
+	background-color: rgb(217,217,217);
+	margin: 1px 2px;
+}
+/* 二级页面右下方图表样式 	end */

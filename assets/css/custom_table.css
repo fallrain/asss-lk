@@ -1,0 +1,78 @@
+.custom-header {
+	background-color: rgb(44, 51, 57);
+	margin-bottom: 0rem;
+	border-color: white;
+	line-height: 50px;
+	font-size: 16px;
+	padding-left: 20px;
+}
+
+.custom-header span {
+	font-weight: bold;
+}
+
+.custom-search {
+	margin-left: 0;
+	padding-bottom: 0;
+	background-color: white;
+	max-width: 100%;
+	-moz-box-shadow: 5px 5px 5px rgb(244, 244, 244);
+	box-shadow: 5px 5px 5px rgb(244, 244, 244);
+}
+
+th {
+	text-align: center;
+}
+
+.am-table-striped>tbody>tr:nth-child(odd)>td, .am-table-striped>tbody>tr:nth-child(odd)>th
+	{
+	/* background-color: #efdbdb; */
+	
+}
+
+.am-table-striped>tbody>tr:nth-child(even)>td, .am-table-striped>tbody>tr:nth-child(even)>th
+	{
+	/* background-color: #dde7ea; */
+	
+}
+
+.am-table thead tr {
+	background-color: rgba(14, 144, 210, .115);
+	color: #0b76ac;
+}
+
+.am-form input[type=text][readonly] {
+	cursor: pointer;
+	background-color: #fff;
+}
+
+@media only screen and (min-width:641px) {
+	#date, #date_dt_jx,#date_dt_fqjx {
+		width: 152px;
+	}
+}
+*+ul {
+    margin-top: 0;
+}
+/* 折叠面板 */
+.custom-search  #myCollapse{
+	display: inline-block;
+	padding: .1em .5em;
+	width: 100px;
+	position: relative;
+	left: calc(50% - 50px);
+	bottom: -1px;
+}
+/* body{
+	font-size: 1.4rem;
+} */
+#table_div .mCSB_container{
+	/* padding-right: 0; */	
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+	height: 6px;
+}
+
+.am-pagination{
+    margin-top: 0px;
+}

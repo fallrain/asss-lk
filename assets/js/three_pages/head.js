@@ -1,0 +1,10 @@
+document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
+document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+document.write('<meta name="format-detection" content="telephone=no">');
+document.write('<meta name="renderer" content="webkit">');
+document.write('<meta http-equiv="Cache-Control" content="no-siteapp" />');
+document.write('<link rel="alternate icon" type="image/png" href="../../assets/i/favicon.png">');
+document.write('<link rel="stylesheet" href="../../assets/css/amazeui.min.css" />');
+document.write('<link rel="stylesheet" href="../../assets/css/amazeui.page.css" />');
+document.write('<link rel="stylesheet" href="../../assets/css/custom_table.css" />');
+document.write('<link rel="stylesheet" href="../../assets/css/index.css">');

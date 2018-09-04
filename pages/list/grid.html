@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <meta charset="UTF-8">
+  <title>网格</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="../../assets/i/favicon.png">
+  <link rel="stylesheet" href="../../assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../../assets/css/amazeui.page.css"/>
+  <link rel="stylesheet" href="../../assets/css/custom_table.css"/>
+  <link rel="stylesheet" href="../../assets/css/index.css">
+  <style>
+    .am-fr {
+      display: none;
+    }
+
+    .am-form-group select {
+      height: 37.3px;
+      font-size: 13.4px;
+    }
+  </style>
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse amt-header custom-header">
+  <a><span>Haier</span>网格</a>
+  <button
+    class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+    data-am-collapse="{target: '#doc-topbar-collapse'}"
+    style="margin-right: 20px;">
+    <span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span>
+  </button>
+  <div class="am-collapse am-topbar-collapse am-topbar-nav"
+       id="doc-topbar-collapse">
+    <div class="am-topbar-right">
+      <!--<ul class="am-nav am-nav-pills " style="line-height: 40px">
+        <li><a href="../one_pages/one_yonghu.html">用户小微</a></li>
+        <li><a href="../one_pages/one_quyu.html">区域小微</a></li>
+        <li><a href="../two_pages/two_lj_chudian.html">触点</a></li>
+      </ul>-->
+    </div>
+  </div>
+</header>
+
+<header class="am-topbar ">
+  <div class="am-container custom-search">
+
+    <button
+      data-am-collapse="{target: '#collapse-head'}"
+      class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+    >
+      <span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span>
+    </button>
+
+    <div class="am-topbar-collapse am-collapse am-in" id="collapse-head">
+      <form class="am-form am-form-inline">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+          <li>
+            <div class="am-form-group am-topbar-btn">
+              <label style="line-height: 40px;">日期:</label>
+            </div>
+          </li>
+          <li>
+            <div class="am-form-group am-topbar-btn">
+              <input type="text" name="date" class="am-form-field"
+                     placeholder="日期选择" id="date" readonly="readonly">
+            </div>
+          </li>
+          <li>
+            <div class="am-form-group am-topbar-btn">
+              <input type="text" class="am-form-field" placeholder="请输入网格小微名称" name="grid_micro_name">
+            </div>
+          </li>
+          <li>
+            <div class="am-form-group am-topbar-btn">
+              <input type="text" class="am-form-field" placeholder="请输入中心名称" name="trade_name">
+            </div>
+          </li>
+          <li>
+            <div class="am-form-group am-topbar-btn">
+              <select name="starLevel" id="starLevel">
+                <option value="">全部　</option>
+                <option value="1">一星　</option>
+                <option value="2">二星　</option>
+                <option value="3">三星　</option>
+                <option value="4">四星　</option>
+                <option value="5">五星　</option>
+              </select>
+            </div>
+          </li>
+          <li>
+            <div class="am-form-group am-topbar-btn">
+              <input type="button" class="am-btn am-btn-primary" id="query" value="查询">
+            </div>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="am-g doc-am-g">
+  <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+
+    <div style="overflow-x: auto;" id="table_div">
+      <table
+        class="am-table am-table-striped am-table-hover am-table-bordered">
+        <thead>
+        <tr>
+          <th style="min-width: 100px" rowspan="2">网格小微编码</th>
+          <th style="min-width: 100px" rowspan="2">网格小微名称</th>
+          <th style="min-width: 100px" rowspan="2">中心名称</th>
+          <th style="min-width: 100px" rowspan="2">零售</th>
+          <th style="min-width: 100px" colspan="2">网点</th>
+          <th style="min-width: 100px" colspan="2">触点</th>
+          <th style="min-width: 100px" colspan="2">亮点</th>
+          <th style="min-width: 100px" rowspan="2">五星评级</th>
+        </tr>
+        <tr>
+          <th style="min-width: 100px">网点个数</th>
+          <th style="min-width: 100px">覆盖率</th>
+          <th style="min-width: 100px">触点个数</th>
+          <th style="min-width: 100px">触点占比</th>
+          <th style="min-width: 100px">亮点个数</th>
+          <th style="min-width: 100px">亮点占比</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <div class="row" style="margin-left: 15px; margin-top: 10px;margin-right: 15px;">
+      第 <input class="am-form-field page_info" id="curr"><!-- <span id="curr"></span> --> 页 / 共 <span
+      id="totalPages"></span> 页 共 <span id="total"></span> 条数据
+      <div class="am-fr">
+        每页 <input class="am-form-field page_info" id="pageNum" value="10"> 条记录
+      </div>
+    </div>
+    <!-- 显示分页按钮 -->
+    <div id="page" class="am-container" style="max-width: 1200px; margin-left: 0px"></div>
+  </div>
+</div>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="../../assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../../assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="../../assets/js/amazeui.min.js"></script>
+<script src="../../assets/js/amazeui.page.js"></script>
+
+<script src="../../assets/js/commonUtils.js"></script>
+<script src="../../assets/js/starUtils.js"></script>
+
+<script src="../../assets/js/grid.js"></script>
+<script src="../../assets/js/three_pages/three_common.js"></script>
+</body>
+</html>
